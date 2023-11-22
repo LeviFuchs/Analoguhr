@@ -1,0 +1,67 @@
+/* Restoring browser effects */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+  
+/* All of the same styling to the body */
+body { 
+    height: 100vh;
+    width: 100vw; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: #000; 
+    background-image: linear-gradient( 
+            70deg, black, white); 
+} 
+  
+/* Sizing, positioning of main  
+    dial of the clock */
+
+.clock {
+    width: 80vw; /* 80% of the viewport width */
+    max-width: 25em; /* Maximum width of 25em */
+    height: 80vw; /* 80% of the viewport width */
+    max-height: 25em; /* Maximum height of 25em */
+    background-image: url(R.png);
+    background-size: cover;
+    box-shadow: 0 3vw 5.8vw; /* 3% of the viewport width for horizontal and vertical shadow */
+    border-radius: 50%; /* Use percentage for border-radius to make it circular */
+}
+  
+.hand.hour-hand, 
+.hand.min-hand, 
+.hand.second-hand { 
+    width: 2%; /* Beispiel: 2% der Breite des Elternelements */
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -100%); 
+    transform-origin: bottom; 
+    z-index: 2; 
+    border-radius: 50%; /* Verwende 50%, um eine runde Form zu erstellen */
+}
+  
+
+  
+/* Different length of different hands of clock */
+.hand.hour-hand { 
+    height: 11vw;
+    width: 1vh;
+    background-color: #000000; 
+} 
+  
+.hand.min-hand { 
+    height: 15vw; 
+    width: 1vh;
+    background-color: #000000; 
+} 
+  
+.hand.second-hand { 
+    height: 20vw; 
+    width: 1vh;
+    background-color: #ff0000; 
+    transform-origin: 50% 85%; 
+} 
